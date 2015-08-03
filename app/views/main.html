@@ -1,0 +1,23 @@
+<span ng-repeat="alert in alerts track by $index">{{alert}}<br></span>
+<div class="col-lg-6">
+  <h2>All snacks</h2>
+  <div class="well well-sm" ng-repeat="snack in theirSnacks | orderBy : '-votes'">
+    <h4>
+      {{snack.name}}      
+      <small class="pull-right">Votes: {{snack.votes}}</small>
+      <span class="text-center" style="padding:10px;">
+        <button class="btn btn-xs btn-primary text-center" ng-click="vote(snack.id)">Vote</button>
+      </span>
+    </h4>
+  </div>
+</div>
+
+<div class = "col-lg-6">
+  <h2>Remaining votes: {{numVotes}}</h2>
+  <h2>Already voted : {{alreadyVoted}}</h2>
+  <div class="well well-sm" ng-repeat="v in mySnacks | orderBy: 'name' : reverse">
+    {{v.name | json}}
+  </div>
+</div>
+
+
