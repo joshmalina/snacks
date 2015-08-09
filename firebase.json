@@ -1,0 +1,9 @@
+{
+  "firebase": "snacks1010101",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
